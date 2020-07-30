@@ -50,15 +50,11 @@ public class LinkedList
 	
 		
 	public static void main(String[] args) {
-	
 	LinkedList ob=new LinkedList();
-
-			ob.display();
-			
-			
-				ob.insertEnd(40);
-				ob.insertEnd(50);
-					ob.display();
+	ob.display();
+	ob.insertEnd(30);
+	ob.insertEnd(60);			
+	ob.display();
 					
 	}
 }
