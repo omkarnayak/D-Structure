@@ -2,17 +2,16 @@ package myproject;
 
 import java.util.*;
 public class BinarySearch {
-	public static void binarySearch(int arr[],int low,int high,int ele)
-	{
+	public static void binarySearch(int a[],int low,int high,int x){
 		int mid=(low+high)/2;
 		while(low<=high)
 		{
-			if(ele>arr[mid]) {
+			if(x>a[mid]) {
 				low=mid+1;
 			}
-			else if(arr[mid]==ele)
+			else if(a[mid]==x)
 			{
-				System.out.println("element is found at index: "+ mid);
+				System.out.println(mid);
 				break;
 			}
 			else {
@@ -22,17 +21,20 @@ public class BinarySearch {
 		}
 		
 	}
- public static void main(String args[]) {
+ public static void main(String args[]) 
+ {
 	 Scanner s=new Scanner(System.in);
 	 int n=s.nextInt();
-	 int[] arr=new int[n];
+	 
+	 int[] a=new int[n];
 	 for(int i=0;i<n;i++)
 	 {
 		 arr[i]=s.nextInt();
 	 }
-	 int ele=s.nextInt();
+	 int y=s.nextInt();
 	 int high=n-1;
 	 int low=0;
-	 binarySearch(arr,low,high,ele);
+	 binarySearch(a,low,high,y);
  }
+	
 }
