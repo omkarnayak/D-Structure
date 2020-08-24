@@ -2,7 +2,7 @@ package myproject;
 
 public class Queue {
 	int n=5;
-	int a[]=new int[n];
+	int arr[]=new int[n];
 	int front,rear;
 	Queue() {
 		front=-1;
@@ -10,26 +10,26 @@ public class Queue {
 	}
 	
 	
-	void enQueue(int ele) {
+	void enQueue(int x) {
 		if(front==0&&rear==n-1)
 			System.out.println("Queue is full");
 		else {
 			if(front==-1)
 				front=0;
 			rear++;
-			a[rear]=ele;
+			arr[rear]=x;
 		}
 	}
 	
 	
 	int deQueue() {
-		int ele;
+		int x;
 		if(front==-1) {
 			System.out.println("Queue is empty");
 			return (-1);
 		}
 		else {
-			ele=a[front];
+			x=arr[front];
 			if(front==rear) {
 				front=-1;
 				rear=-1;
@@ -37,24 +37,24 @@ public class Queue {
 			else
 				front++;
 		}
-		return ele;
+		return x;
 			
 	}
 	
 	int peek() {
-		int ele;
+		int x;
 		if(front==-1) {
 			System.out.println("Queue is empty");
 			return (-1);
 		}
 		else {
-			ele=a[front];
+			x=arr[front];
 			if(front>=rear) {
 				front=-1;
 				rear=-1;
 			}
 		}
-		return ele;
+		return x;
 	}
 	
 	void display() {
@@ -62,7 +62,7 @@ public class Queue {
 			System.out.println("Empty queue");
 		else {
 			for(int i=front;i<=rear;i++)
-				System.out.println(a[i]);
+				System.out.println(arr[i]);
 		}
 	}
 	
